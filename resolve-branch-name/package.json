@@ -1,0 +1,28 @@
+{
+    "name": "resolve-branch-name",
+    "version": "0.1.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc -p .",
+        "watch": "tsc -p . -w",
+        "start": "node -r dotenv/config dist/index.js",
+        "publish": "npm run build && tfx build tasks upload --task-path . --overwrite true"
+    },
+    "author": "QuatroDev",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "11.11.4",
+        "@types/q": "1.5.2",
+        "@types/dotenv": "6.1.1",
+        "dotenv": "7.0.0",
+        "simplr-tslint": "1.0.0-alpha.14",
+        "tfx-cli": "0.6.4",
+        "tslint": "5.14.0",
+        "tslint-language-service": "0.9.9",
+        "typescript": "3.3.4000"
+    },
+    "dependencies": {
+        "azure-pipelines-task-lib": "2.8.0"
+    }
+}

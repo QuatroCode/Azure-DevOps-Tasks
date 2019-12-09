@@ -1,0 +1,30 @@
+{
+    "id": "c274182f-d414-4dc7-8f08-f3841ff9b447",
+    "name": "ResolveBranchName",
+    "friendlyName": "Resolve branch name",
+    "description": "Set a variable in the build environment for the branch name that is being built.",
+    "helpMarkDown": "Set a variable in the build environment for the branch name that is being built.",
+    "category": "Utility",
+    "author": "QuatroDev",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Resolve branch name",
+    "inputs": [
+        {
+            "name": "variableKey",
+            "type": "string",
+            "label": "Variable key",
+            "defaultValue": "BRANCH_NAME",
+            "required": true,
+            "helpMarkDown": "Key for the variable that is going to be set."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "dist/index.js"
+        }
+    }
+}
